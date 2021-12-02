@@ -1,0 +1,48 @@
+#  ------------ General options ----------------------------------------
+save_path = "./save_ImageNet/"
+dataPath = "/media/disk1/cbh/DATASET/ILSVRC2012/"
+dataset = "imagenet"
+
+# ------------- Data options -------------------------------------------
+nThreads = 8  # number of data loader threads
+
+# ---------- Optimization options --------------------------------------
+nEpochs = 400  # number of total epochs to train 400
+batchSize = 16  # batchsize
+momentum = 0.9  # momentum 0.9
+weightDecay = 1e-4  # weight decay 1e-4
+opt_type = "SGD"
+warmup_epochs = 50 # number of epochs for warmup
+
+lr_S = 0.000001 # initial learning rate = 0.000001
+
+# ---------- Model options ---------------------------------------------
+experimentID = "imganet_4bit_"
+nClasses = 1000  # number of classes in the dataset
+
+# ---------- Quantization options ---------------------------------------------
+qw = 4
+qa = 4
+
+# ----------KD options ---------------------------------------------
+temperature = 20
+alpha = 20
+
+# ----------Generator options ---------------------------------------------
+latent_dim = 100
+img_size = 224
+channels = 3
+
+lr_G = 0.001       # default 0.001
+lrPolicy_G = "multi_step"  # options: multi_step | linear | exp | const | step
+step_G = [100,200,300]   # step for linear or exp learning rate policy
+decayRate_G = 0.1 # lr decay rate
+b1 = 0.5
+b2 = 0.999
+
+use_FDDA = True
+D_BNSLoss_weight = 0.9
+C_BNSLoss_weight = 0.01
+FDDA_iter = 1
+
+BNLoss_weight = 0.2
