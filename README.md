@@ -22,11 +22,11 @@
 
 4. Use FDDA to train a quantized model. Modify the `qw, qa` in imagenet_config.hocon to set desired bit-width. Modify the `dataPath` in imagenet_config.hocon to the path of ImageNet Dataset. For all layers are quantized to same bit-width, run:
 
-    `CUDA_VISIBLE_DEVICES=0 python main_cosine_CBNS.py --model_name resnet18/mobilenet_w1/mobilenetv2_w1/regnetx_600m --conf_path imagenet_config.hocon --id=0`
+    `CUDA_VISIBLE_DEVICES=0 python main_DBNS_CBNS.py --model_name resnet18/mobilenet_w1/mobilenetv2_w1/regnetx_600m --conf_path imagenet_config.hocon --id=0`
 
    For F8L8, run:
    
-   `CUDA_VISIBLE_DEVICES=0 python main_cosine_CBNS_8F8L.py --model_name resnet18/mobilenet_w1/mobilenetv2_w1/regnetx_600m --conf_path imagenet_config.hocon --id=0`
+   `CUDA_VISIBLE_DEVICES=0 python main_DBNS_CBNS_8F8L.py --model_name resnet18/mobilenet_w1/mobilenetv2_w1/regnetx_600m --conf_path imagenet_config.hocon --id=0`
 
 ## Evaluate Our Models
 

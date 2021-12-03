@@ -392,6 +392,8 @@ class Trainer(object):
 			z = z.contiguous()
 			G_labels = G_labels.contiguous()
 			G_images = self.generator(z, G_labels)
+
+
 		
 			self.mean_list.clear()
 			self.var_list.clear()
@@ -423,6 +425,14 @@ class Trainer(object):
 				self.mean_list.clear()
 				self.var_list.clear()
 				output_teacher_batch = self.model_teacher(images)
+
+				## add data data augmentation
+				train_transform = transforms.Compose([
+					transforms.RandomResizedCrop(size=224, scale=(0.5, 1.0)),
+					transforms.RandomHorizontalFlip(),
+				])
+				G_images = train_transform(torch.from_numpy(G_images))
+				G_output_teacher_batch = self.model_teacher(G_images)
 
 				output, loss_S = self.forward(torch.cat((images, G_images.detach())).detach(),
 											  torch.cat((output_teacher_batch.detach(),
