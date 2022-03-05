@@ -50,7 +50,7 @@ Following results can be obtained:
 
 | Model     | Bit-width| Dataset  | Top-1 Acc.  |
 | --------- | -------- | -------- | ----------- | 
-| resnet18  | W4A4-F4L4 | ImageNet | 68.880%    | 
+| resnet18  | W4A4-F4L4 | ImageNet | 68.884%    | 
 | resnet18  | W4A4-F8L8 | ImageNet | 69.758%    | 
 | resnet18  | W5A5-F5L5 | ImageNet | 70.558%    | 
 | resnet18  | W5A5-F8L8 | ImageNet | 70.864%    | 
