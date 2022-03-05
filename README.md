@@ -3,7 +3,7 @@
 ## Requirements
 
 - Python >= 3.7.10
-- Pytorch >= 1.2.0, Pytorch >= 1.7.0 (For regnetx600m specially)
+- Pytorch >= 1.7.0
 - Torchvision >= 0.4.0
 
 ## Reproduce the Experiment Results 
@@ -50,7 +50,7 @@ Following results can be obtained:
 
 | Model     | Bit-width| Dataset  | Top-1 Acc.  |
 | --------- | -------- | -------- | ----------- | 
-| resnet18  | W4A4-F4L4 | ImageNet | 68.744%    | 
+| resnet18  | W4A4-F4L4 | ImageNet | 68.880%    | 
 | resnet18  | W4A4-F8L8 | ImageNet | 69.758%    | 
 | resnet18  | W5A5-F5L5 | ImageNet | 70.558%    | 
 | resnet18  | W5A5-F8L8 | ImageNet | 70.864%    | 
