@@ -1,4 +1,4 @@
-# Fine-grained Data Distribution Alignment for Post-Training Quantization [paper](https://arxiv.org/abs/2109.04186)
+# ECCV2022 Paper - Fine-grained Data Distribution Alignment for Post-Training Quantization [paper](https://arxiv.org/abs/2109.04186)
 
 ## Requirements
 
